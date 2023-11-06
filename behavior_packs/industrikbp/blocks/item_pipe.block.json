@@ -1,0 +1,1079 @@
+{
+	"format_version": "1.20.20",
+	"minecraft:block": {
+		"description": {
+			"identifier": "industrik:item_pipe",
+			"menu_category": {
+				"category": "items"
+			},
+			"states": {
+				"industrik:xp": [
+					false,
+					true
+				],
+				"industrik:xn": [
+					false,
+					true
+				],
+				"industrik:yp": [
+					false,
+					true
+				],
+				"industrik:yn": [
+					false,
+					true
+				],
+				"industrik:zp": [
+					false,
+					true
+				],
+				"industrik:zn": [
+					false,
+					true
+				]
+			}
+		},
+		"components": {
+			"minecraft:collision_box": true,
+			"minecraft:selection_box": true,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.8
+			},
+			"minecraft:destructible_by_explosion": false,
+			"minecraft:geometry": "geometry.item_pipe",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "item_pipe",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:map_color": "#7a7061"
+		},
+		"permutations":[
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": true,
+					"yp": true,
+					"yn": true,
+					"zp": true,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": true,
+					"yp": true,
+					"yn": true,
+					"zp": true,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": true,
+					"yp": true,
+					"yn": true,
+					"zp": false,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": true,
+					"yp": true,
+					"yn": true,
+					"zp": false,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": true,
+					"yp": true,
+					"yn": false,
+					"zp": true,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": true,
+					"yp": true,
+					"yn": false,
+					"zp": true,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": true,
+					"yp": true,
+					"yn": false,
+					"zp": false,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": true,
+					"yp": true,
+					"yn": false,
+					"zp": false,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": true,
+					"yp": false,
+					"yn": true,
+					"zp": true,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": true,
+					"yp": false,
+					"yn": true,
+					"zp": true,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": true,
+					"yp": false,
+					"yn": true,
+					"zp": false,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": true,
+					"yp": false,
+					"yn": true,
+					"zp": false,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": true,
+					"yp": false,
+					"yn": false,
+					"zp": true,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": true,
+					"yp": false,
+					"yn": false,
+					"zp": true,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": true,
+					"yp": false,
+					"yn": false,
+					"zp": false,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": true,
+					"yp": false,
+					"yn": false,
+					"zp": false,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": false,
+					"yp": true,
+					"yn": true,
+					"zp": true,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": false,
+					"yp": true,
+					"yn": true,
+					"zp": true,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": false,
+					"yp": true,
+					"yn": true,
+					"zp": false,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": false,
+					"yp": true,
+					"yn": true,
+					"zp": false,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": false,
+					"yp": true,
+					"yn": false,
+					"zp": true,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": false,
+					"yp": true,
+					"yn": false,
+					"zp": true,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": false,
+					"yp": true,
+					"yn": false,
+					"zp": false,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": false,
+					"yp": true,
+					"yn": false,
+					"zp": false,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": false,
+					"yp": false,
+					"yn": true,
+					"zp": true,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": false,
+					"yp": false,
+					"yn": true,
+					"zp": true,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": false,
+					"yp": false,
+					"yn": true,
+					"zp": false,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": false,
+					"yp": false,
+					"yn": true,
+					"zp": false,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": false,
+					"yp": false,
+					"yn": false,
+					"zp": true,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": false,
+					"yp": false,
+					"yn": false,
+					"zp": true,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": false,
+					"yp": false,
+					"yn": false,
+					"zp": false,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == True && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": true,
+					"xn": false,
+					"yp": false,
+					"yn": false,
+					"zp": false,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": true,
+					"yp": true,
+					"yn": true,
+					"zp": true,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": true,
+					"yp": true,
+					"yn": true,
+					"zp": true,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": true,
+					"yp": true,
+					"yn": true,
+					"zp": false,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": true,
+					"yp": true,
+					"yn": true,
+					"zp": false,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": true,
+					"yp": true,
+					"yn": false,
+					"zp": true,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": true,
+					"yp": true,
+					"yn": false,
+					"zp": true,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": true,
+					"yp": true,
+					"yn": false,
+					"zp": false,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": true,
+					"yp": true,
+					"yn": false,
+					"zp": false,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": true,
+					"yp": false,
+					"yn": true,
+					"zp": true,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": true,
+					"yp": false,
+					"yn": true,
+					"zp": true,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": true,
+					"yp": false,
+					"yn": true,
+					"zp": false,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": true,
+					"yp": false,
+					"yn": true,
+					"zp": false,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": true,
+					"yp": false,
+					"yn": false,
+					"zp": true,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": true,
+					"yp": false,
+					"yn": false,
+					"zp": true,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": true,
+					"yp": false,
+					"yn": false,
+					"zp": false,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == True && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": true,
+					"yp": false,
+					"yn": false,
+					"zp": false,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": false,
+					"yp": true,
+					"yn": true,
+					"zp": true,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": false,
+					"yp": true,
+					"yn": true,
+					"zp": true,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": false,
+					"yp": true,
+					"yn": true,
+					"zp": false,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": false,
+					"yp": true,
+					"yn": true,
+					"zp": false,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": false,
+					"yp": true,
+					"yn": false,
+					"zp": true,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": false,
+					"yp": true,
+					"yn": false,
+					"zp": true,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": false,
+					"yp": true,
+					"yn": false,
+					"zp": false,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == True && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": false,
+					"yp": true,
+					"yn": false,
+					"zp": false,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": false,
+					"yp": false,
+					"yn": true,
+					"zp": true,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": false,
+					"yp": false,
+					"yn": true,
+					"zp": true,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": false,
+					"yp": false,
+					"yn": true,
+					"zp": false,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == True && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": false,
+					"yp": false,
+					"yn": true,
+					"zp": false,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": false,
+					"yp": false,
+					"yn": false,
+					"zp": true,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == True && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": false,
+					"yp": false,
+					"yn": false,
+					"zp": true,
+					"zn": false
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == True",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": false,
+					"yp": false,
+					"yn": false,
+					"zp": false,
+					"zn": true
+				  }
+				}
+			  }
+			},
+			{
+			  "condition": "query.block_state('industrik:xp') == False && query.block_state('industrik:xn') == False && query.block_state('industrik:yp') == False && query.block_state('industrik:yn') == False && query.block_state('industrik:zp') == False && query.block_state('industrik:zn') == False",
+			  "components": {
+				"minecraft:geometry": {
+				  "identifier": "geometry.item_pipe",
+				  "bone_visibility": {
+					"xp": false,
+					"xn": false,
+					"yp": false,
+					"yn": false,
+					"zp": false,
+					"zn": false
+				  }
+				}
+			  }
+			}
+		  ]
+	}
+}

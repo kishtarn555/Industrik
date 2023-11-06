@@ -1,0 +1,5 @@
+tile.industrik:cable.name=Cable
+tile.myname:item_pusher.name=Item pusher
+tile.myname:piston_converter.name=Piston pulse converter
+tile.industrik:item_pipe.name=Item pipe
+item.industrik:energy_nugget=Energy nugget

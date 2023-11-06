@@ -1,0 +1,59 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "industrik:piston_converter",
+			"menu_category": {
+				"category": "items"
+			},
+			"states": {
+				"industrik:power": [
+					"off",
+					"on"
+				]
+			}
+		},
+		"components": {
+			"minecraft:collision_box": true,
+			"minecraft:selection_box": true,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 200
+			},
+			"minecraft:map_color": "#7d1b8f",
+			"minecraft:geometry": "geometry.industrik.piston_converter",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "piston_energy_converter",
+					"render_method": "opaque"
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('industrik:power')=='off'",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "piston_energy_converter",
+							"render_method": "opaque"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('industrik:power')=='on'",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "piston_energy_converter_active",
+							"render_method": "opaque"
+						}
+					}
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,37 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Industrik",
+		"description": "Industrial mod",
+		"uuid": "fb62da51-d230-4143-b7e7-54da5cbe9b3e",
+		"version": [0, 0, 1],
+		"min_engine_version": [1, 20, 30]
+	},
+	"modules": [
+		{
+			"description": "Script resources",
+			"language": "javascript",
+			"type": "script",
+			"uuid": "b8e58331-d1a6-4aec-8cb2-122757b4e753",
+			"version": [0, 0, 1],
+			"entry": "scripts/main.js"
+		},
+		{
+			"description": "Debug items",
+			"type": "data",
+			"uuid": "e8dc59f0-8b18-4674-a082-4ea08416f11a",
+			"version": [1, 0, 0]
+		}
+	],
+	"dependencies": [
+		{
+			"module_name": "@minecraft/server",
+			"version": "1.7.0-beta"
+		}
+	],
+	"metadata": {
+		"generated_with": {
+			"blockbench_block_wizard": ["1.2.1"]
+		}
+	}
+}

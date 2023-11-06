@@ -1,0 +1,24 @@
+{
+	"format_version": 1,
+	"header": {
+		"description": "Industrik Resource Pack",
+		"name": "BedrockEditsResourcePack",
+		"uuid": "186622f4-5de1-4779-a7ce-53a7acb8f383",
+		"version": [1, 0, 0],
+		"min_engine_version": [1, 2, 6],
+		"vanilla": [1, 12, 0]
+	},
+	"modules": [
+		{
+			"description": "Industrik Resource Pack",
+			"type": "resources",
+			"uuid": "842fa813-3daa-4034-9460-cd51747b8f6e",
+			"version": [1, 0, 0]
+		}
+	],
+	"metadata": {
+		"generated_with": {
+			"blockbench_block_wizard": ["1.2.1"]
+		}
+	}
+}
