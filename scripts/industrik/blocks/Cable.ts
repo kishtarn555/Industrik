@@ -14,7 +14,7 @@ const CableBlock = new ConnectBlock({
     onPlace:onPlaceCable,
     onUpdate:onCableBlockUpdate,
 });
-CableBlock.subscribeBlockToNeighborUpdates(CableBlock);
+CableBlock.subscribeNeighborToBlockUpdates(CableBlock);
 registerConductor(CABLE_ID);
 
 

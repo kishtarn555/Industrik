@@ -1,0 +1,18 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "myname:test",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/test"
+			},
+			"geometry": {
+				"default": "geometry.test"
+			},
+			"render_controllers": ["controller.render.default"]
+		}
+	}
+}

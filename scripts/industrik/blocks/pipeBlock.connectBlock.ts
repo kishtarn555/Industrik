@@ -16,7 +16,7 @@ export const PipeBlock = new ConnectBlock({
     onUpdate: onPipeBlockUpdate
 });
 
-PipeBlock.subscribeBlockToNeighborUpdates(PipeBlock);
+PipeBlock.subscribeNeighborToBlockUpdates(PipeBlock);
 
 
 function placePipe(block: Block) {
@@ -54,6 +54,11 @@ function onPlacePipe(e: PlayerPlaceBlockAfterEvent) {
     const block = e.block;
     placePipe(block);
 }
+
+
+
+
+
 
 
 export function addConnectorBlock(typeId:string) {

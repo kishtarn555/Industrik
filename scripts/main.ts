@@ -1,4 +1,4 @@
-import { PlayerPlaceBlockAfterEvent, system, world } from "@minecraft/server";
+import { system } from "@minecraft/server";
 import { Addon } from "./connectTogether";
 import { industrikAddon } from "./industrik/addon";
 

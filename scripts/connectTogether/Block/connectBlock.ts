@@ -94,11 +94,11 @@ export class ConnectBlock {
 
 
 
-    subscribeBlockToNeighborUpdates(target:ConnectBlock) {
+    subscribeNeighborToBlockUpdates(target:ConnectBlock) {
         this.updatableBlocks.add(target);
     }
 
-    unsubscribeBlockToNeighborUpdates(target:ConnectBlock) {
+    unsubscribeNeighborToBlockUpdates(target:ConnectBlock) {
         this.updatableBlocks.delete(target);
     }
 
