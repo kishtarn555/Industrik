@@ -1,0 +1,27 @@
+{
+	"format_version": "1.20.20",
+	"minecraft:block": {
+		"description": {
+			"identifier": "industrik:item_filter",
+			"menu_category": {
+				"category": "items"
+			}
+		},
+		"components": {
+			"minecraft:collision_box": true,
+			"minecraft:selection_box": true,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1
+			},
+			"minecraft:destructible_by_explosion": false,
+			"minecraft:geometry": "geometry.item_filter",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "item_filter",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:map_color": "#95661c"
+		}
+	}
+}

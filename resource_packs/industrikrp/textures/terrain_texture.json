@@ -4,6 +4,9 @@
 	"padding": 8,
 	"num_mip_levels": 4,
 	"texture_data": {
+		"item_filter": {
+			"textures": "textures/blocks/item_filter.png"
+		},
 		"item_pipe": {
 			"textures": "textures/blocks/item_pipe.png"
 		},
@@ -17,7 +20,7 @@
 			"textures": "textures/blocks/piston_energy_converter"
 		},
 		"piston_energy_converter_active": {
-			"textures":"textures/blocks/piston_energy_converter_active"
+			"textures": "textures/blocks/piston_energy_converter_active"
 		}
 	}
 }

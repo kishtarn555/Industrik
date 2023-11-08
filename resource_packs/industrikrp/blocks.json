@@ -1,4 +1,7 @@
 {
+	"item_filter": {
+		"sound": "stone"
+	},
 	"item_pipe": {
 		"sound": "wood"
 	},
@@ -10,6 +13,6 @@
 	},
 	"industrik:piston_energy_converter": {
 		"sound": "stone",
-		"textures":"piston_energy_converter"
+		"textures": "piston_energy_converter"
 	}
 }

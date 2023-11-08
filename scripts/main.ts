@@ -5,7 +5,6 @@ import { industrikAddon } from "./industrik/addon";
 const addons:Addon[] = [industrikAddon]
 
 
-
 for (let addon of addons) {
   addon.awake();
 }
