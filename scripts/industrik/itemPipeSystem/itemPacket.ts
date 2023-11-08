@@ -12,7 +12,8 @@ interface ItemPipeContext {
     location:Vector3,
     dimension:Dimension,
     direction:Direction,
-    distance:number
+    distance:number,
+    forceSourceSlot?:number
 }
 
 class ItemPacket extends Packet<ItemPacketData, ItemPipeContext> {

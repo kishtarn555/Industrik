@@ -33,8 +33,26 @@ function onPipeBlockReceive(packet:ItemPacket) :boolean {
         packet.reject("Cannot push items to non container block");
         return true;
     }
+
     if (packet.data.Container!= null) {
         const sourceContainer = packet.data.Container;
+        if (packet.context.forceSourceSlot!= null) {
+            const slot = packet.context.forceSourceSlot;
+            let item = sourceContainer.getItem(slot);
+            if (item == null) {
+                packet.reject("No item at source slot");
+                return true;
+            }
+            let before = item.amount
+            let after = sourceContainer.transferItem(slot, targetContainer)?.amount;
+            if (before !== after) {                
+                packet.resolve("success?" +before.toString()+" "+(after?.toString()??" "));
+            } else {
+                console.warn("ITEM SHOULD BE FAILING??");
+                packet.reject("no item moved");
+            }
+            return true;
+        }
         
         if (!sourceContainer.isValid()) {
             packet.reject("Container became invalid during transmission");
@@ -51,7 +69,7 @@ function onPipeBlockReceive(packet:ItemPacket) :boolean {
             movedItem=false;
         }
         if (!movedItem) {
-            packet.reject("No tranfer, either target is full or source is empty");
+            packet.reject("No transfer, either target is full or source is empty");
             return true;
         }
         packet.resolve("success");
@@ -103,8 +121,8 @@ function SendItemFromItemPusher(block:Block) {
             reject("Component did not accept item package");
         }
     })
-    .then(_=>{})
-    .catch(_=>{});
+    .then(msg=>{console.warn(msg)})
+    .catch(err=>{console.warn(err)});
 }
 
 

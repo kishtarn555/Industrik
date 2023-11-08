@@ -10,6 +10,8 @@ import { RegisterItemPipeComponent } from "./itemPipeSystem/componentRegisrty";
 import { PipeBlockIPC } from "./blocks/pipeBlock.itemPipe";
 import { ItemPusherIPC } from "./blocks/ItemPusher.itemPipe";
 import { ItemPusherMachine } from "./blocks/itemPusher.power";
+import { ItemFilterBlock } from "./blocks/ItemFilter.block";
+import { ItemFilterIPC } from "./blocks/ItemFilter.itemPipe";
 
 class IndustrikAddon extends Addon {
 
@@ -23,9 +25,11 @@ class IndustrikAddon extends Addon {
         RegisterBlock(PipeBlock.typeId,PipeBlock);
         RegisterBlock(ItemPusher.typeId, ItemPusher);
         RegisterBlock(PistonConverter.typeId, PistonConverter);
+        RegisterBlock(ItemFilterBlock.typeId, ItemFilterBlock);
         
         RegisterItemPipeComponent(PipeBlockIPC.getTypeId(), PipeBlockIPC);
         RegisterItemPipeComponent(ItemPusherIPC.getTypeId(), ItemPusherIPC);
+        RegisterItemPipeComponent(ItemFilterIPC.getTypeId(), ItemFilterIPC);
 
         RegisterMachineBlock(ItemPusher.typeId, ItemPusherMachine);
     }
