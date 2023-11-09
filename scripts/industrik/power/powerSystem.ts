@@ -10,7 +10,8 @@ const SignalConductors:Set<string> = new Set<string>();
 interface CircuitSignal {
     power:number,
     location:Vector3
-    dimension:Dimension
+    dimension:Dimension,
+    source:Vector3
 
 }
 
@@ -24,7 +25,7 @@ const EMISSION_POWER = 15;
 
 let QUEUE_MAX_LENGTH = 65536;
 
-function pushToNext(dimension:Dimension, location: Vector3, power:number) {
+function pushToNext(dimension:Dimension, location: Vector3, power:number, source:Vector3) {
     if (nextQueue.length > QUEUE_MAX_LENGTH) {
         console.error("[PowerSystem], queue capacity exceeded, signals are being lost");
         return;
@@ -32,11 +33,12 @@ function pushToNext(dimension:Dimension, location: Vector3, power:number) {
     nextQueue.push({
         power:power,
         location: location,
-        dimension:dimension
+        dimension:dimension,
+        source:source
     });
 }
 
-function pushToCurrent(dimension:Dimension, location: Vector3, power:number) {
+function pushToCurrent(dimension:Dimension, location: Vector3, power:number, source:Vector3) {
     if (queue.length > QUEUE_MAX_LENGTH) {
         console.error("[PowerSystem], queue capacity exceeded, signals are being lost");
         return;
@@ -44,12 +46,13 @@ function pushToCurrent(dimension:Dimension, location: Vector3, power:number) {
     queue.push({
         power:power,
         location: location,
-        dimension:dimension
+        dimension:dimension,
+        source:source
     });
 }
 
 function emitPower(dimension:Dimension, location: Vector3) {
-    pushToNext(dimension, location, EMISSION_POWER);
+    pushToNext(dimension, location, EMISSION_POWER, location);
 }
 
 
@@ -109,7 +112,7 @@ function propagate() {
             if (processedBlocks.has(locationToString(neighbor.location)) || !SignalConductors.has(neighbor.typeId)) {
                 continue;
             }
-            pushToCurrent(neighbor.dimension, neighbor.location, current.power-1);
+            pushToCurrent(neighbor.dimension, neighbor.location, current.power-1, current.source);
             processedBlocks.add(locationToString(neighbor.location));
         }
     }
