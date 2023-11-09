@@ -6,6 +6,7 @@ import { getDirectionFromState,  getNeighborFromDirection, getOpositeDirection }
 import { PipeBlock, addConnectorBlock } from "./pipeBlock.connectBlock";
 import { CableBlock } from "./Cable";
 import { getItemPipeComponent } from "../itemPipeSystem/componentRegisrty";
+import { sendItemPacketToFirstNeighbor } from "../itemPipeSystem/pipeUtils";
 
 const ItemPusherIPC = new ItemPipeComponent(
     {
@@ -22,7 +23,9 @@ function onPipeBlockReceive(packet:ItemPacket) :boolean {
         packet.reject("Item pusher is unloaded");
         return true;
     }
-    const target = getNeighborFromDirection(block, context.direction);
+    const facing_state = block.permutation.getState("minecraft:facing_direction") as "up" | "down" | "north" | "south" | "east" | "west"
+
+    const target = getNeighborFromDirection(block, getDirectionFromState(facing_state) );
     if (target==null) {
         packet.reject("Cannot push items to unloaded or out of bounds blocks");
         return true;
@@ -48,8 +51,15 @@ function onPipeBlockReceive(packet:ItemPacket) :boolean {
             if (before !== after) {                
                 packet.resolve("success?" +before.toString()+" "+(after?.toString()??" "));
             } else {
-                console.warn("ITEM SHOULD BE FAILING??");
-                packet.reject("no item moved");
+                sendItemPacketToFirstNeighbor(packet, [
+                    packet.context.direction,
+                    Direction.North,
+                    Direction.South,
+                    Direction.East,
+                    Direction.West,
+                    Direction.Up,
+                    Direction.Down
+                ]);
             }
             return true;
         }
@@ -59,19 +69,34 @@ function onPipeBlockReceive(packet:ItemPacket) :boolean {
             return true;
         }
         let movedItem=false;
+        let attepmted=false;
         for (let slot =0; slot < sourceContainer.size; slot++) {
             let item = sourceContainer.getItem(slot);
             if (item == null) continue;
             let before = item.amount
             let after = sourceContainer.transferItem(slot, targetContainer)?.amount;
             movedItem=true;
+            attepmted=true;
             if (before !== after) break;
             movedItem=false;
         }
-        if (!movedItem) {
-            packet.reject("No transfer, either target is full or source is empty");
+        if (!movedItem && !attepmted) {
+            packet.reject("Source is empty");
             return true;
         }
+        if (!movedItem) {
+            sendItemPacketToFirstNeighbor(packet, [
+                packet.context.direction,
+                Direction.North,
+                Direction.South,
+                Direction.East,
+                Direction.West,
+                Direction.Up,
+                Direction.Down
+            ]);
+            return true;
+        }
+
         packet.resolve("success");
         return true;
         

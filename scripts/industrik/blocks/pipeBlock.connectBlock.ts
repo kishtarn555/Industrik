@@ -6,8 +6,7 @@ import { BlockRegistry } from "../../connectTogether/Block/blockRegistry";
 export const ITEM_PIPE_ID = "industrik:item_pipe";
 
 const ConnectsWith: string[] = [
-    ITEM_PIPE_ID,
-    "minecraft:chest"
+    ITEM_PIPE_ID
 ]
 
 export const PipeBlock = new ConnectBlock({

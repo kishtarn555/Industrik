@@ -1,7 +1,9 @@
+import { Direction } from "@minecraft/server";
 import { PIPE_MAX_DISTANCE } from "../constants";
 import { getItemPipeComponent } from "../itemPipeSystem/componentRegisrty";
 import { ItemPacket } from "../itemPipeSystem/itemPacket";
 import ItemPipeComponent from "../itemPipeSystem/itemPipeComponent";
+import { sendItemPacketToFirstNeighbor } from "../itemPipeSystem/pipeUtils";
 import { getNeighborFromDirection } from "../library/BlockAPI/BlockApi.extension";
 import { PipeBlock, ITEM_PIPE_ID } from "./pipeBlock.connectBlock";
 
@@ -26,26 +28,15 @@ function onPipeBlockReceive(packet:ItemPacket) :boolean {
         packet.reject("An unloaded pipe was accessed");
         return true; 
     }
-    const nextBlock = getNeighborFromDirection(block, context.direction);
-    if (nextBlock==null) {
-        packet.reject("Pipe sent to an unloaded block or a block out of bounds")
-        return true;
-    }
-    const component = getItemPipeComponent(nextBlock.typeId);
-    if (component == null) {
-        packet.reject("Next block does not accept items");
-        return true;
-    }
-    
-    component.onPacketReceive(
-        packet.withContext({
-            dimension:context.dimension,
-            location:nextBlock.location,
-            direction:context.direction,
-            distance:context.distance+1,
-            forceSourceSlot:context.forceSourceSlot,
-        })
-    );
+    sendItemPacketToFirstNeighbor(packet, [
+        packet.context.direction,
+        Direction.North,
+        Direction.South,
+        Direction.East,
+        Direction.West,
+        Direction.Up,
+        Direction.Down
+    ])
     return true;
 }
 

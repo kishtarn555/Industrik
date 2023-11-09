@@ -18,7 +18,16 @@ const ItemFilterIPC = new ItemPipeComponent({
 
 
 function passThrough(packet: ItemPacket) {
-    sendItemPacketToFirstNeighbor(packet, [Direction.East, Direction.West, Direction.South, Direction.North]);
+    sendItemPacketToFirstNeighbor(
+        packet, 
+        [   
+            packet.context.direction,
+            Direction.North,
+            Direction.South,
+            Direction.East,
+            Direction.West
+        ]
+    );
 }
 
 function evaluateItem(itemStack: ItemStack, filterContainer: Container, context: ItemPipeContext): boolean {
