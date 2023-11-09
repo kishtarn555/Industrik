@@ -146,8 +146,8 @@ function SendItemFromItemPusher(block:Block) {
             reject("Component did not accept item package");
         }
     })
-    .then(msg=>{console.warn(msg)})
-    .catch(err=>{console.warn(err)});
+    .then(msg=>{})
+    .catch(err=>{});
 }
 
 

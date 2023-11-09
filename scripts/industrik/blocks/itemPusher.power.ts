@@ -1,3 +1,4 @@
+import { system } from "@minecraft/server";
 import { CustomBlockEventArgs } from "../../connectTogether/Block/connectBlock";
 import { PowerBlockMachine, PowerOnEventId, RegisterMachineBlock } from "../power/powerSystem";
 import { CableBlock, addConnectorBlock } from "./Cable";
@@ -9,7 +10,7 @@ const ItemPusherMachine = new PowerBlockMachine({
 });
 
 function PushItem(e:CustomBlockEventArgs) {
-    SendItemFromItemPusher(e.block);
+    system.run(()=>SendItemFromItemPusher(e.block));
 }
 
 ItemPusher.subscribeCustomEvent(PowerOnEventId, PushItem)

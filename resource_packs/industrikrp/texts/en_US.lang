@@ -5,3 +5,4 @@ tile.industrik:item_pipe.name=Item pipe
 item.industrik:energy_nugget=Energy nugget
 entity.myname:test.name=test
 tile.industrik:item_filter.name=Item Filter
+item.industrik:energy_cell=Energy Cell
