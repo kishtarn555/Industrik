@@ -105,7 +105,7 @@ function propagate() {
         for (let neighbor of neighbors) {
             if (Machines.has(neighbor.typeId)) {
                 let machine = Machines.get(neighbor.typeId)!
-                system.run(()=>machine.block.callCustomEvent(PowerOnEventId, {block:neighbor}));
+                system.run(()=>machine.block.callCustomEvent(PowerOnEventId, {block:neighbor, payload:JSON.stringify(current)   }));
                 continue;
             }
             if (current.power <= 1) continue;
