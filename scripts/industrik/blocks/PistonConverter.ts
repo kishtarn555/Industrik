@@ -34,7 +34,7 @@ function PowerOn(e: CustomBlockEventArgs) {
 PistonConverter.subscribeCustomEvent("pulse", Pulse);
 PistonConverter.subscribeCustomEvent("power_on", PowerOn);
 
-world.beforeEvents.pistonActivate.subscribe((args) => {
+world.afterEvents.pistonActivate.subscribe((args) => {
     if (!args.isExpanding) {
         return;//Let this block be pulled
     }
@@ -42,9 +42,20 @@ world.beforeEvents.pistonActivate.subscribe((args) => {
     if (blocks.length !== 1) {
         return;
     }
-    let pushingBlock = args.piston.block.dimension.getBlock(blocks[0]);
-    if (pushingBlock?.typeId === PistonConverter.typeId) {
-        args.cancel = true;
+    let dx = args.piston.getAttachedBlocksLocations()[0].x - args.block.x;
+    let dy = args.piston.getAttachedBlocksLocations()[0].y - args.block.y;
+    let dz = args.piston.getAttachedBlocksLocations()[0].z - args.block.z;
+    let pushingBlock = blocks[0].dimension.getBlock({
+        x:args.block.x-dx,
+        y:args.block.y-dy,
+        z:args.block.z-dz,
+    })
+    if (pushingBlock==null) {
+        return;
+    }
+    console.error(pushingBlock.location.x,pushingBlock.location.y,pushingBlock.location.z,)
+    console.error(pushingBlock.typeId);
+    if (pushingBlock.typeId === PistonConverter.typeId) {
         system.run(() =>
             PistonConverter.callCustomEvent("pulse", { block: pushingBlock! })
         );
